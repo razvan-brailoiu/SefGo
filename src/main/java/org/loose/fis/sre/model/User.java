@@ -60,4 +60,11 @@ public class User {
         result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString(){
+        String buletin = "";
+        buletin += this.username + " " + this.role;
+        return buletin;
+    }
 }
