@@ -19,6 +19,24 @@ public class DevInitController {
     private Button logOutButton;
 
     @FXML
+    private Button pickDatesButton;
+
+    @FXML
+    public void initPickDates(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUICalendar.fxml"));
+            root = (Parent) loader.load();
+            Stage window = (Stage) pickDatesButton.getScene().getWindow();
+            window.setTitle("Calendar");
+            window.setScene(new Scene(root, 634, 428));
+
+
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @FXML
     public void iniateLogOut(){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/login.fxml"));
         try {
