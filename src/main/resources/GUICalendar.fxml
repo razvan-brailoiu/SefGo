@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane accessibleRole="CHECK_BOX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.HelloController">
+   <children>
+      <Button fx:id="b01" mnemonicParsing="false" onAction="#button01" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="01" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b02" layoutX="75.0" mnemonicParsing="false" onAction="#button02" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="02" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="b03" layoutX="150.0" mnemonicParsing="false" onAction="#button03" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="03" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b04" layoutX="225.0" mnemonicParsing="false" onAction="#button04" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="04" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b05" layoutX="300.0" mnemonicParsing="false" onAction="#button05" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="05" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b07" layoutY="75.0" mnemonicParsing="false" onAction="#button07" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="07" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b08" layoutX="75.0" layoutY="75.0" mnemonicParsing="false" onAction="#button08" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="08" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b09" layoutX="150.0" layoutY="75.0" mnemonicParsing="false" onAction="#button09" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="09" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b10" layoutX="225.0" layoutY="75.0" mnemonicParsing="false" onAction="#button10" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="10" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b11" layoutX="300.0" layoutY="75.0" mnemonicParsing="false" onAction="#button11" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="11" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b13" layoutY="150.0" mnemonicParsing="false" onAction="#button13" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="13" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b14" layoutX="75.0" layoutY="150.0" mnemonicParsing="false" onAction="#button14" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="14" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b15" layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#button15" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="15" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b16" layoutX="225.0" layoutY="150.0" mnemonicParsing="false" onAction="#button16" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="16" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b17" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#button17" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="17" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b19" layoutY="225.0" mnemonicParsing="false" onAction="#button19" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="19" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b20" layoutX="75.0" layoutY="225.0" mnemonicParsing="false" onAction="#button20" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="20" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b21" layoutX="150.0" layoutY="225.0" mnemonicParsing="false" onAction="#button21" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="21" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b22" layoutX="225.0" layoutY="225.0" mnemonicParsing="false" onAction="#button22" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="22" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b23" layoutX="300.0" layoutY="225.0" mnemonicParsing="false" onAction="#button23" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="23" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b06" layoutX="375.0" mnemonicParsing="false" onAction="#button06" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="06" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b12" layoutX="375.0" layoutY="75.0" mnemonicParsing="false" onAction="#button12" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="12" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b18" layoutX="375.0" layoutY="150.0" mnemonicParsing="false" onAction="#button18" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="18" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b24" layoutX="375.0" layoutY="225.0" mnemonicParsing="false" onAction="#button24" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="24" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b25" layoutY="300.0" mnemonicParsing="false" onAction="#button25" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="25" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b26" layoutX="75.0" layoutY="300.0" mnemonicParsing="false" onAction="#button26" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="26" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b27" layoutX="150.0" layoutY="300.0" mnemonicParsing="false" onAction="#button27" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="27" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b28" layoutX="225.0" layoutY="300.0" mnemonicParsing="false" onAction="#button28" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="28" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b29" layoutX="300.0" layoutY="300.0" mnemonicParsing="false" onAction="#button29" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="29" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b30" layoutX="375.0" layoutY="300.0" mnemonicParsing="false" onAction="#button30" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="30" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="b31" layoutY="375.0" mnemonicParsing="false" onAction="#button31" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #03AC13;" text="31" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="75.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FF0000;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="225.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FF0000;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="150.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FF0000;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="300.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FF0000;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="375.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FF0000;" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <VBox layoutX="450.0" layoutY="-2.0" prefHeight="450.0" prefWidth="503.0" style="-fx-background-color: #F96209;">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="503.0">
+               <children>
+                  <TextField prefHeight="31.0" prefWidth="364.0" style="-fx-background-color: F68A06;" text="Days for: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="currentDate" prefHeight="31.0" prefWidth="178.0" style="-fx-background-color: F68A06;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <TextField prefHeight="53.0" prefWidth="503.0" style="-fx-background-color: #F96209;" text="                  CALENDAR OPTIONS">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <HBox prefHeight="46.0" prefWidth="503.0">
+               <children>
+                  <TextField prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: F68A06;" text="SELECTED DAYS DETAILS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="dSelect" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="94.0" style="-fx-background-color: F68A06;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="46.0" prefWidth="34.0" style="-fx-background-color: F68A06;" text="/">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tDays" layoutX="160.0" layoutY="10.0" prefHeight="46.0" prefWidth="116.0" style="-fx-background-color: F68A06;">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Button fx:id="deselectDays" mnemonicParsing="false" prefHeight="46.0" prefWidth="485.0" style="-fx-background-color: F96209;" text="Deselect all selected days">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="481.0" text="Button">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Separator layoutX="444.0" layoutY="-191.0" orientation="VERTICAL" prefHeight="646.0" prefWidth="11.0" style="-fx-background-color: #FFFF00;" />
+   </children>
+</AnchorPane>
