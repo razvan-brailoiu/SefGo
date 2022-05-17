@@ -20,7 +20,7 @@ public class DevInitController {
 
     @FXML
     public void iniateLogOut(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/login.fxml"));
         try {
             root = (Parent) loader.load();
             Stage window = (Stage) logOutButton.getScene().getWindow();
