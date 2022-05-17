@@ -2,16 +2,21 @@ package org.loose.fis.sre.model;
 
 import org.dizitart.no2.objects.Id;
 
+import java.util.ArrayList;
+
 public class User {
     @Id
     private String username;
     private String password;
     private String role;
 
+    private ArrayList<Integer> list;
+
     public User(String username, String password, String role) {
         this.username = username;
         this.password = password;
         this.role = role;
+        this.list = new ArrayList<>();
     }
 
     public User() {
