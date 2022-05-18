@@ -13,11 +13,38 @@ public class User {
     private static String last_password;
 
 
+    private String list;
+
+
     public User(String username, String password, String role) {
         this.username = username;
         this.password = password;
         this.role = role;
+        this.list = "empty";
+
     }
+
+
+    public String getList(){
+        return this.list.toString();
+    }
+
+    public String getListToString(){
+        return this.list.toString();
+    }
+
+//    public String set
+
+//    public User(String username, String password, String role, String list) {
+//        this.username = username;
+//        this.password = password;
+//        this.role = role;
+//        this.list = list;
+//    }
+
+//    public String getList() {
+//        return list;
+//    }
 
     public User() {
     }
@@ -62,6 +89,10 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public void setList(String list) {
+        this.list = list;
     }
 
     @Override

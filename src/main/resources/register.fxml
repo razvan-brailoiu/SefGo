@@ -35,7 +35,7 @@
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
         <Button onAction="#handleRegisterAction" text="Register" />
     </HBox>
-   <Button fx:id="backToAdminButton" onAction="#iniateBackToAdmin" mnemonicParsing="false" prefHeight="35.0" prefWidth="68.0" text="Back" GridPane.columnIndex="2" />
+   <Button fx:id="backToAdminButton" onAction="#iniateBackToAdmin"  mnemonicParsing="false" prefHeight="35.0" prefWidth="68.0" text="Back" GridPane.columnIndex="2" />
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
