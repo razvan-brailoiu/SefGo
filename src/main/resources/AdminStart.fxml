@@ -9,8 +9,8 @@
       <Label layoutX="66.0" layoutY="36.0" prefHeight="104.0" prefWidth="189.0" text="HELLO&lt; ADMIN &gt;" />
       <Label layoutX="66.0" layoutY="97.0" prefHeight="42.0" prefWidth="220.0" text="Here you can manage your employees" />
       <Button fx:id="addNewEmployeeButton" layoutX="60.0" layoutY="140.0" mnemonicParsing="false" onAction="#iniateAddNewEmployee" prefHeight="33.0" prefWidth="220.0" text="Add a new employee " />
-      <Button fx:id="removeEmployeeButton" layoutX="60.0" layoutY="188.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="220.0" text="Remove an employee" />
+      <Button fx:id="editEmployeesButton" layoutX="60.0" layoutY="188.0" mnemonicParsing="false" onAction="#iniateEditEmployees" prefHeight="34.0" prefWidth="220.0" text="Edit employees' accounts" />
       <Button fx:id="generateReportButton" layoutX="60.0" layoutY="233.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="220.0" text="Generate a monthly report" />
-      <Button fx:id="logOutButton" onAction="#iniateLogOut" layoutX="464.0" layoutY="24.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="87.0" text="Log out" />
+      <Button fx:id="logOutButton" layoutX="464.0" layoutY="24.0" mnemonicParsing="false" onAction="#iniateLogOut" prefHeight="34.0" prefWidth="87.0" text="Log out" />
    </children>
 </AnchorPane>

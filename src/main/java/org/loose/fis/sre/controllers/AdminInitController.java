@@ -17,6 +17,8 @@ public class AdminInitController {
     private Button addNewEmployeeButton;
 
     @FXML
+    private Button editEmployeesButton;
+    @FXML
     private Button logOutButton;
     private Parent root;
 
@@ -50,6 +52,20 @@ public class AdminInitController {
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    public void iniateEditEmployees(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/ViewEmployees.fxml"));
+            root = (Parent) loader.load();
+            Stage window = (Stage) addNewEmployeeButton.getScene().getWindow();
+            window.setTitle("InApp");
+            window.setScene(new Scene(root, 634, 428));
+
+        }catch(IOException e){
+            System.out.println(e.getMessage());
         }
     }
 }

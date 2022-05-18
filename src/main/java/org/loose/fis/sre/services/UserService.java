@@ -25,6 +25,10 @@ public class UserService {
         userRepository = database.getRepository(User.class);
     }
 
+    public static ObjectRepository<User> getUserRepository() {
+        return userRepository;
+    }
+
     public static void addUser(String username, String password, String role) throws UsernameAlreadyExistsException {
         checkUserDoesNotAlreadyExist(username);
         userRepository.insert(new User(username, encodePassword(username, password), role));
@@ -35,6 +39,10 @@ public class UserService {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
         }
+    }
+
+    public static void deleteUser(User user){
+        userRepository.remove(user);
     }
 
     private static String encodePassword(String salt, String password) {
