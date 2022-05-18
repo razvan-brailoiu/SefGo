@@ -3,6 +3,7 @@ package org.loose.fis.sre.services;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.sre.exceptions.IncorrectCredentials;
+import org.loose.fis.sre.exceptions.UserNotInDatabaseException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.model.User;
 
@@ -38,6 +39,39 @@ public class UserService {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
+        }
+    }
+
+    private static void checkIfUserInDatabase (String username) throws UserNotInDatabaseException {
+        int flag = 0;
+        for (User user: userRepository.find()){
+            if(Objects.equals(username, user.getUsername()))
+                flag = 1;
+        }
+
+        if(flag == 0) throw new UserNotInDatabaseException();
+    }
+
+    public static void changePassWord (String username, String newpassword) throws UserNotInDatabaseException{
+        checkIfUserInDatabase(username);
+        for(User user: userRepository.find()){
+            if(Objects.equals(username,user.getUsername())){
+                deleteUser(user);
+                try {
+                    addUser(username, encodePassword(username, newpassword),"Developer");
+                }
+                catch(UsernameAlreadyExistsException e){
+                    System.out.println(e.getMessage());
+                }
+                break;
+            }
+        }
+    }
+
+    public static void deleteByUsername(String username){
+        for(User user: userRepository.find()){
+            if(Objects.equals(user.getUsername(),username))
+                userRepository.remove(user);
         }
     }
 
