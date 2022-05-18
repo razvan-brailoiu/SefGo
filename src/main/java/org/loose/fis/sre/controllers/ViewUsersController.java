@@ -28,7 +28,7 @@ public class ViewUsersController {
     private TableColumn<User, String> role_col;
 
     @FXML
-    private  TableColumn<User, ArrayList<Integer>> dates_col;
+    private  TableColumn<User, String > dates_col;
 
     @FXML
     private Button backButton;
@@ -50,9 +50,9 @@ public class ViewUsersController {
     }
 
     private void loadData(){
-        user_col.setCellValueFactory(new PropertyValueFactory<>("username"));
-        role_col.setCellValueFactory(new PropertyValueFactory<>("role"));
-        dates_col.setCellValueFactory(new PropertyValueFactory<>("list"));
+        user_col.setCellValueFactory(new PropertyValueFactory<User, String>("username"));
+        role_col.setCellValueFactory(new PropertyValueFactory<User, String>("role"));
+        dates_col.setCellValueFactory(new PropertyValueFactory<User, String>("list"));
 
         ObservableList<User> usersList = FXCollections.observableArrayList();
 

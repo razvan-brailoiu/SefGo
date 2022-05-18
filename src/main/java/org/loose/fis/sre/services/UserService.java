@@ -75,6 +75,14 @@ public class UserService {
         }
     }
 
+//    public static String getDates (String username){
+//        for(User user: userRepository.find()){
+//            if(Objects.equals(user.getUsername(),username))
+//                return user.getList();
+//        }
+//        return null;
+//    }
+
     public static void deleteUser(User user){
         userRepository.remove(user);
     }
