@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import org.loose.fis.sre.exceptions.IncorrectCredentials;
+import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.services.UserService;
 
 import java.awt.*;
@@ -44,6 +45,8 @@ public class LoginController {
         try {
             String role = departmentList.getValue();
             UserService.VerifyUserCredentials(userField.getText(), passwordField.getText(), role);
+            User.setLast_username(userField.getText());
+            User.setLast_pasword(passwordField.getText());
             messageLabel.setText("Login was succesful");
             Parent root;
             if (Objects.equals(role, "Admin")) {

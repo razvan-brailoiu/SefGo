@@ -9,17 +9,35 @@ public class User {
     private String username;
     private String password;
     private String role;
+    private static String last_username;
+    private static String last_password;
 
-    private ArrayList<Integer> list;
 
     public User(String username, String password, String role) {
         this.username = username;
         this.password = password;
         this.role = role;
-        this.list = new ArrayList<>();
     }
 
     public User() {
+    }
+
+    public static void setLast_username(String username)
+    {
+        last_username = username;
+    }
+
+    public static void setLast_pasword(String password)
+    {
+        last_password = password;
+    }
+
+    public static String getLast_pasword() {
+        return last_password;
+    }
+
+    public static String getLast_username() {
+        return last_username;
     }
 
     public String getUsername() {
