@@ -4,24 +4,47 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ChangePassForUserController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="635.0" style="-fx-background-color: F96209;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ChangePassForUserController">
    <children>
       <Label layoutX="95.0" layoutY="93.0" prefHeight="48.0" prefWidth="210.0" text="Change password">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="95.0" layoutY="141.0" prefHeight="26.0" prefWidth="69.0" text="username" />
+      <Label layoutX="95.0" layoutY="141.0" prefHeight="26.0" prefWidth="143.0" text="Username">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <TextField fx:id="userText" layoutX="243.0" layoutY="141.0" />
-      <Label layoutX="95.0" layoutY="174.0" prefHeight="18.0" prefWidth="96.0" text="new password" />
-      <Label layoutX="95.0" layoutY="202.0" text="confirm new password" />
-      <PasswordField fx:id="passText" layoutX="243.0" layoutY="171.0" />
-      <PasswordField fx:id="confirmPassText" layoutX="244.0" layoutY="198.0" />
-      <Button fx:id="confirmChangeButton" layoutX="267.0" layoutY="265.0" mnemonicParsing="false" onAction="#iniateNewPasswordProcedure" prefHeight="26.0" prefWidth="110.0" text="Button" />
-      <Label fx:id="statusLabel" layoutX="116.0" layoutY="240.0" prefHeight="26.0" prefWidth="424.0" />
-      <Button fx:id="backButton" layoutX="518.0" layoutY="36.0" mnemonicParsing="false" onAction="#iniateBackToAdminProcedure" prefHeight="35.0" prefWidth="76.0" text="Back" />
+      <Label layoutX="95.0" layoutY="170.0" prefHeight="26.0" prefWidth="143.0" text="New password">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="95.0" layoutY="206.0" prefHeight="26.0" prefWidth="143.0" text="Confirm new password">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <PasswordField fx:id="passText" layoutX="243.0" layoutY="170.0" />
+      <PasswordField fx:id="confirmPassText" layoutX="243.0" layoutY="206.0" />
+      <Button fx:id="confirmChangeButton" layoutX="267.0" layoutY="265.0" mnemonicParsing="false" onAction="#iniateNewPasswordProcedure" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: F68A06;" text="Confirm change">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Label fx:id="statusLabel" layoutX="71.0" layoutY="238.0" prefHeight="26.0" prefWidth="424.0" />
+      <Button fx:id="backButton" layoutX="518.0" layoutY="36.0" mnemonicParsing="false" onAction="#iniateBackToAdminProcedure" prefHeight="35.0" prefWidth="76.0" style="-fx-background-color: F68A06;" text="Back">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <ImageView fitHeight="196.0" fitWidth="244.0" layoutX="407.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@passencr.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

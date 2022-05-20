@@ -4,11 +4,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ViewUsersController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="638.0" style="-fx-background-color: F96209;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ViewUsersController">
    <children>
-      <Button fx:id="backButton" layoutX="547.0" layoutY="47.0" mnemonicParsing="false" onAction="#iniateBackToAdmin" prefHeight="40.0" prefWidth="66.0" text="Back" />
+      <Button fx:id="backButton" layoutX="547.0" layoutY="47.0" mnemonicParsing="false" onAction="#iniateBackToAdmin" prefHeight="40.0" prefWidth="66.0" style="-fx-background-color: F68A06;" text="Back">
+         <effect>
+            <DropShadow />
+         </effect></Button>
       <TableView fx:id="userTableView" layoutX="47.0" layoutY="47.0" prefHeight="318.0" prefWidth="480.0">
         <columns>
           <TableColumn fx:id="user_col" prefWidth="128.8000144958496" text="user" />
@@ -17,6 +21,9 @@
         </columns>
       </TableView>
       <Label fx:id="textLabel" layoutX="71.0" layoutY="14.0" prefHeight="20.0" prefWidth="480.0" text="Label" />
-      <Button fx:id="deleteUserButton" layoutX="535.0" layoutY="303.0" mnemonicParsing="false" onAction="#initiateDeleteUserProcedure" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: RED;" text="Delete user" textFill="WHITE" />
+      <Button fx:id="deleteUserButton" layoutX="535.0" layoutY="303.0" mnemonicParsing="false" onAction="#initiateDeleteUserProcedure" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: RED;" text="Delete user" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect></Button>
    </children>
 </AnchorPane>

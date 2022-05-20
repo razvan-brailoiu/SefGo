@@ -7,7 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.User;
+import org.loose.fis.sre.services.UserService;
 
 import java.io.IOException;
 
@@ -24,7 +27,15 @@ public class AdminInitController {
     @FXML
     private Button changePassButton;
 
+    @FXML
+    private Label helloAdminLabel;
+
     private Parent root;
+
+    @FXML
+    public void initialize(){
+        helloAdminLabel.setText("Hello, "+User.getLast_username());
+    }
 
     @FXML
     public void iniateAddNewEmployee(){
@@ -78,7 +89,7 @@ public class AdminInitController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ChangePassWindow.fxml"));
             root = (Parent) loader.load();
-            Stage window = (Stage) editEmployeesButton.getScene().getWindow();
+            Stage window = (Stage) changePassButton.getScene().getWindow();
             window.setTitle("InApp");
             window.setScene(new Scene(root, 634, 428));
 
