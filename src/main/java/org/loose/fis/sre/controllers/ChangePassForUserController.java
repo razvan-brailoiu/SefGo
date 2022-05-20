@@ -46,7 +46,7 @@ public class ChangePassForUserController {
         if(!Objects.equals(pass_two,pass_one))
             throw new DifferentPasswordsException();
         UserService.deleteByUsername(user);
-        UserService.addUser(user, pass_one, (String) "Developer");
+        UserService.addUser(user, pass_one, (String) "Developer", "");
         statusLabel.setText("Password changed succesfully");
         } catch (UsernameAlreadyExistsException | DifferentPasswordsException e) {
             statusLabel.setText("Passwords must be the same!");
