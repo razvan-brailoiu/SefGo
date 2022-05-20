@@ -16,22 +16,26 @@ public class User {
     private String list;
 
 
-    public User(String username, String password, String role) {
+    public User(String username, String password, String role, String list) {
         this.username = username;
         this.password = password;
         this.role = role;
-        this.list = "empty";
+        if(role == "Admin")
+            this.list = "all days";
+        else if (list == "")
+        {
+            this.list = "not selected";
+        }
+        else
+             this.list = list;
 
     }
 
 
     public String getList(){
-        return this.list.toString();
+        return this.list;
     }
 
-    public String getListToString(){
-        return this.list.toString();
-    }
 
 //    public String set
 

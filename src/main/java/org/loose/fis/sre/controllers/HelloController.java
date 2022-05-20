@@ -8,17 +8,19 @@ import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Objects;
 
 import javafx.stage.Stage;
+import org.loose.fis.sre.exceptions.UserNotInDatabaseException;
+import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.model.User;
+import org.loose.fis.sre.services.UserService;
 
 
 public class HelloController {
 
     public int counter = 0;
     public int daysToWork = 10;
-    public int month = 1;
-    public int year = 2022;
     private final String username = User.getLast_username();
     private final String password = User.getLast_pasword();
     private int[] list = new int[32];
@@ -98,24 +100,12 @@ public class HelloController {
     @FXML
     Button b31;
     private Parent root;
-
-    public void initialize(int month, int year, int daysToWork)
-    {
-        this.month = month;
-        this.year = year;
-        this.daysToWork = daysToWork;
-        dSelect.setText(String.valueOf(counter));
-        tDays.setText(String.valueOf(tDays));
-        currentDate.setText(month + "/" + year);
-        tDays.setText(String.valueOf(daysToWork));
-
-    }
+    @FXML
+    Label test;
 
     @FXML
     private void markSelectedDays(int[] array)
     {
-        array[1] = 1;
-        array[7] = 1;
         for(int i = 1; i <= 31; i++){
             if(i == 1 && array[i] == 1)
                 button01();
@@ -189,15 +179,34 @@ public class HelloController {
     }
 
     @FXML
-    public void initialize()
-    {
+    public void initialize() throws UserNotInDatabaseException {
         LocalDate currentGlobalDate = LocalDate.now();
         dSelect.setText(String.valueOf(counter));
         tDays.setText(String.valueOf(daysToWork));
         currentDate.setText(currentGlobalDate.getMonth() + "/" + currentGlobalDate.getYear());
         tDays.setText(String.valueOf(daysToWork));
-        markSelectedDays(list);
+        System.out.println(username);
+        String userList = UserService.getListByUsername(username);
+        if(!Objects.equals(userList, "not selected")) {
+            String[] stringArray = userList.split(",");
+            for (int i = 0; i < stringArray.length; i++) {
+                list[Integer.valueOf(stringArray[i])] = 1;
+            }
+            markSelectedDays(list);
+        }
 
+    }
+
+    @FXML
+    public void saveAction() throws UsernameAlreadyExistsException {
+        String newList = "";
+        for (int i = 0; i < 32; i++)
+        {
+            if(list[i] == 1)
+                newList = newList + i + ",";
+        }
+        UserService.deleteByUsername(username);
+        UserService.addUser( username, password, "Developer", newList);
 
     }
 

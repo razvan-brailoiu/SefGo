@@ -32,9 +32,9 @@ public class UserService {
         return userRepository;
     }
 
-    public static void addUser(String username, String password, String role) throws UsernameAlreadyExistsException {
+    public static void addUser(String username, String password, String role, String list) throws UsernameAlreadyExistsException {
         checkUserDoesNotAlreadyExist(username);
-        userRepository.insert(new User(username, encodePassword(username, password), role));
+        userRepository.insert(new User(username, encodePassword(username, password), role, list));
     }
 
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
@@ -42,6 +42,14 @@ public class UserService {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
         }
+    }
+
+    public static String getListByUsername (String username) throws UserNotInDatabaseException {
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername()))
+                return user.getList();
+        }
+        return null;
     }
 
     private static void checkIfUserInDatabase (String username) throws UserNotInDatabaseException {
@@ -54,21 +62,6 @@ public class UserService {
         if(flag == 0) throw new UserNotInDatabaseException();
     }
 
-    public static void changePassWord (String username, String newpassword) throws UserNotInDatabaseException{
-        checkIfUserInDatabase(username);
-        for(User user: userRepository.find()){
-            if(Objects.equals(username,user.getUsername())){
-                deleteUser(user);
-                try {
-                    addUser(username, encodePassword(username, newpassword),"Developer");
-                }
-                catch(UsernameAlreadyExistsException e){
-                    System.out.println(e.getMessage());
-                }
-                break;
-            }
-        }
-    }
 
     public static void deleteByUsername(String username){
         for(User user: userRepository.find()){
@@ -77,15 +70,17 @@ public class UserService {
         }
     }
 
+
     public static List<User> getAllUsers(){
         return userRepository.find().toList();
     }
+
 
     public static void deleteUser(User user){
         userRepository.remove(user);
     }
 
-    private static String encodePassword(String salt, String password) {
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 
