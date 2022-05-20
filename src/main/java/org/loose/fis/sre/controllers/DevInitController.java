@@ -28,7 +28,7 @@ public class DevInitController {
             root = (Parent) loader.load();
             Stage window = (Stage) pickDatesButton.getScene().getWindow();
             window.setTitle("Calendar");
-            window.setScene(new Scene(root, 634, 428));
+            window.setScene(new Scene(root, 900, 450));
 
 
         }catch(IOException e){
