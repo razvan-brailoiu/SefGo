@@ -6,36 +6,47 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="center" hgap="10" prefHeight="400" prefWidth="600" vgap="10" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.RegistrationController">
+<GridPane alignment="center" hgap="10" prefHeight="400" prefWidth="600" style="-fx-background-color: F96209;" vgap="10" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.RegistrationController">
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
-    <Text id="title-text" text="Adding a new employee" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+    <Text id="title-text" text="Adding a new employee" wrappingWidth="230.7027587890625" GridPane.columnSpan="2" GridPane.rowIndex="1">
+      <font>
+         <Font size="15.0" />
+      </font></Text>
 
-    <Label text="Username:" GridPane.rowIndex="2" />
+    <Label prefHeight="18.0" prefWidth="70.0" text="Username" GridPane.rowIndex="2" />
 
     <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-    <Label text="Password:" GridPane.rowIndex="3" />
+    <Label text="Password" GridPane.rowIndex="3" />
 
     <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-    <Label text="Role:" GridPane.rowIndex="4" />
+    <Label text="Department" GridPane.rowIndex="4" />
 
     <ChoiceBox fx:id="role" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
     </ChoiceBox>
 
     <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="8" />
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
-        <Button onAction="#handleRegisterAction" text="Register" />
+        <Button onAction="#handleRegisterAction" style="-fx-background-color: F68A06;" text="Register">
+         <effect>
+            <DropShadow />
+         </effect></Button>
     </HBox>
-   <Button fx:id="backToAdminButton" onAction="#iniateBackToAdmin"  mnemonicParsing="false" prefHeight="35.0" prefWidth="68.0" text="Back" GridPane.columnIndex="2" />
+   <Button fx:id="backToAdminButton" mnemonicParsing="false" onAction="#iniateBackToAdmin" prefHeight="35.0" prefWidth="68.0" style="-fx-background-color: F68A06;" text="Back" GridPane.columnIndex="2">
+      <effect>
+         <DropShadow />
+      </effect></Button>
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />

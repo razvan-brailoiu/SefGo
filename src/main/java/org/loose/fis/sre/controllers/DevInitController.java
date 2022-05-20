@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.User;
 
 import java.io.IOException;
 
@@ -22,13 +24,21 @@ public class DevInitController {
     private Button pickDatesButton;
 
     @FXML
+    private Label devHelloLabel;
+
+    @FXML
+    public void initialize(){
+        devHelloLabel.setText("Hello, "+ User.getLast_username());
+    }
+
+    @FXML
     public void initPickDates(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUICalendar.fxml"));
             root = (Parent) loader.load();
             Stage window = (Stage) pickDatesButton.getScene().getWindow();
             window.setTitle("Calendar");
-            window.setScene(new Scene(root, 900, 450));
+            window.setScene(new Scene(root, 947, 450));
 
 
         }catch(IOException e){
