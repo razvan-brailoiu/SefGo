@@ -10,6 +10,7 @@ import org.loose.fis.sre.model.User;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 
 import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
@@ -19,6 +20,7 @@ public class UserService {
     private static ObjectRepository<User> userRepository;
 
     public static void initDatabase() {
+        FileSystemService.initDirectory();
         Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("registration-example.db").toFile())
                 .openOrCreate("test", "test");
@@ -66,6 +68,11 @@ public class UserService {
             if(Objects.equals(user.getUsername(),username))
                 userRepository.remove(user);
         }
+    }
+
+
+    public static List<User> getAllUsers(){
+        return userRepository.find().toList();
     }
 
 
