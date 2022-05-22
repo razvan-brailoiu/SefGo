@@ -31,11 +31,15 @@ public class HelloController {
     private final int maxDays = 9;
 
     @FXML
-    TextField dSelect;
+    private Label dSelect;
     @FXML
-    TextField tDays;
+    private Label tDays;
     @FXML
-    TextField currentDate;
+    private Label currentDate;
+    @FXML
+    private TextField selDays;
+    @FXML
+    private TextField days;
     @FXML
     Button deselectDays;
     @FXML
@@ -114,6 +118,8 @@ public class HelloController {
 
     @FXML
     public void initialize() throws UserNotInDatabaseException {
+        selDays.setOpacity(1);
+        days.setOpacity(1);
         buttonList = List.of(b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21, b22, b23, b24, b25, b26, b27, b28, b29, b30, b31);
         LocalDate currentGlobalDate = LocalDate.now();
         dSelect.setText(String.valueOf(counter));
