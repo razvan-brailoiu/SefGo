@@ -2,9 +2,7 @@ package org.loose.fis.sre.services;
 
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
-import org.loose.fis.sre.exceptions.IncorrectCredentials;
-import org.loose.fis.sre.exceptions.UserNotInDatabaseException;
-import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
+import org.loose.fis.sre.exceptions.*;
 import org.loose.fis.sre.model.User;
 
 import java.nio.charset.StandardCharsets;
@@ -32,7 +30,9 @@ public class UserService {
         return userRepository;
     }
 
-    public static void addUser(String username, String password, String role, String list) throws UsernameAlreadyExistsException {
+    public static void addUser(String username, String password, String role, String list) throws UsernameAlreadyExistsException, UsernameLengthException, OneOrMoreEmptyFieldsException {
+        checkIfFieldsAreFilled(username, password, role);
+        checkUserNameLength(username);
         checkUserDoesNotAlreadyExist(username);
         userRepository.insert(new User(username, encodePassword(username, password), role, list));
     }
@@ -104,6 +104,18 @@ public class UserService {
 
     public static void deleteUser(User user){
         userRepository.remove(user);
+    }
+
+    public static void checkIfFieldsAreFilled(String filledUser, String filledPass, String filledRole) throws OneOrMoreEmptyFieldsException {
+        if(filledUser.isEmpty() || filledPass.isEmpty() || filledRole.isEmpty()){
+            System.out.println("One of them is emptty");
+            throw new OneOrMoreEmptyFieldsException();
+        }
+    }
+
+    public static void checkUserNameLength(String username) throws UsernameLengthException {
+        if(username.length()<3 || username.length()>20)
+            throw new UsernameLengthException();
     }
 
     public static String encodePassword(String salt, String password) {
