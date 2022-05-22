@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -199,19 +200,19 @@
          <children>
             <HBox prefHeight="30.0" prefWidth="503.0">
                <children>
-                  <TextField prefHeight="31.0" prefWidth="364.0" style="-fx-background-color: F68A06;" text="Days for: ">
+                  <TextField fx:id="days" disable="true" editable="false" prefHeight="31.0" prefWidth="364.0" style="-fx-background-color: F68A06;" text="Days for: ">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="currentDate" prefHeight="31.0" prefWidth="178.0" style="-fx-background-color: F68A06;">
+                  <Label fx:id="currentDate" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: F68A06;">
                      <font>
                         <Font size="15.0" />
                      </font>
-                  </TextField>
+                  </Label>
                </children>
             </HBox>
-            <TextField prefHeight="54.0" prefWidth="480.0" style="-fx-background-color: #F96209;" text="                  CALENDAR OPTIONS">
+            <TextField editable="false" prefHeight="54.0" prefWidth="480.0" style="-fx-background-color: #F96209;" text="                  CALENDAR OPTIONS">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -221,26 +222,26 @@
             </TextField>
             <HBox prefHeight="46.0" prefWidth="503.0">
                <children>
-                  <TextField prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: F68A06;" text="SELECTED DAYS DETAILS">
+                  <TextField fx:id="selDays" disable="true" editable="false" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: F68A06;" text="SELECTED DAYS DETAILS">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="dSelect" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="94.0" style="-fx-background-color: F68A06;">
+                  <Label fx:id="dSelect" alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="85.0" style="-fx-background-color: F68A06;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="46.0" prefWidth="35.0" style="-fx-background-color: F68A06;" text="/">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </TextField>
-                  <TextField prefHeight="46.0" prefWidth="34.0" style="-fx-background-color: F68A06;" text="/">
+                  <Label fx:id="tDays" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: F68A06;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="15.0" />
                      </font>
-                  </TextField>
-                  <TextField fx:id="tDays" layoutX="160.0" layoutY="10.0" prefHeight="46.0" prefWidth="116.0" style="-fx-background-color: F68A06;">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </TextField>
+                  </Label>
                </children>
             </HBox>
          </children>
