@@ -20,6 +20,9 @@ public class AdminInitController {
     private Button addNewEmployeeButton;
 
     @FXML
+    private Button generateReportButton;
+
+    @FXML
     private Button editEmployeesButton;
     @FXML
     private Button logOutButton;
@@ -92,6 +95,20 @@ public class AdminInitController {
             Stage window = (Stage) changePassButton.getScene().getWindow();
             window.setTitle("InApp");
             window.setScene(new Scene(root, 634, 428));
+
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @FXML
+    public void GenerateReportAction(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/WhoComingAdmin.fxml"));
+            root = (Parent) loader.load();
+            Stage window = (Stage) generateReportButton.getScene().getWindow();
+            window.setTitle("InApp");
+            window.setScene(new Scene(root, 709, 400));
 
         }catch(IOException e){
             System.out.println(e.getMessage());

@@ -26,7 +26,7 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="generateReportButton" layoutX="60.0" layoutY="261.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="203.0" style="-fx-background-color: F68A06;" text="Generate a monthly report">
+      <Button fx:id="generateReportButton" layoutX="60.0" layoutY="261.0" mnemonicParsing="false" onAction="#GenerateReportAction" prefHeight="34.0" prefWidth="203.0" style="-fx-background-color: F68A06;" text="Generate a monthly report">
          <effect>
             <DropShadow />
          </effect></Button>
