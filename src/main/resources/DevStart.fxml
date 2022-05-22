@@ -22,7 +22,7 @@
          <effect>
             <DropShadow />
          </effect></Button>
-      <Button fx:id="whoElseButton" layoutX="62.0" layoutY="182.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="196.0" style="-fx-background-color: F68A06;" text="See who else is coming">
+      <Button fx:id="whoElseButton" layoutX="62.0" layoutY="182.0" mnemonicParsing="false" onAction="#initWhoElse" prefHeight="35.0" prefWidth="196.0" style="-fx-background-color: F68A06;" text="See who else is coming">
          <effect>
             <DropShadow />
          </effect></Button>

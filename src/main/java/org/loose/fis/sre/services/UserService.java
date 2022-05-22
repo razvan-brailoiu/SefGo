@@ -44,12 +44,38 @@ public class UserService {
         }
     }
 
+    public static User getUserbyUsername(String username)  {
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername()))
+                return user;
+        }
+        return null;
+    }
+
     public static String getListByUsername (String username) throws UserNotInDatabaseException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
                 return user.getList();
         }
         return null;
+    }
+
+    public static String getListByDate (int date) throws UserNotInDatabaseException {
+        String users = "";
+
+        for (User user : userRepository.find()) {
+
+            if (!Objects.equals(user.getList(), "not selected") && !Objects.equals(user.getList(), "all days") && !Objects.equals(user.getList(), "empty")) {
+                String[] stringArray = user.getList().split(",");
+                for (int i = 0; i < stringArray.length; i++) {
+                    if (Objects.equals(Integer.valueOf(stringArray[i]), date)) {
+                        users += user.getUsername() + ",";
+                        break;
+                    }
+                }
+            }
+        }
+        return users;
     }
 
     private static void checkIfUserInDatabase (String username) throws UserNotInDatabaseException {
