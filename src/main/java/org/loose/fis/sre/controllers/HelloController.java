@@ -11,8 +11,10 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 import javafx.stage.Stage;
+import org.loose.fis.sre.exceptions.OneOrMoreEmptyFieldsException;
 import org.loose.fis.sre.exceptions.UserNotInDatabaseException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
+import org.loose.fis.sre.exceptions.UsernameLengthException;
 import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.services.UserService;
 
@@ -198,7 +200,7 @@ public class HelloController {
     }
 
     @FXML
-    public void saveAction() throws UsernameAlreadyExistsException {
+    public void saveAction() throws UsernameAlreadyExistsException, OneOrMoreEmptyFieldsException, UsernameLengthException {
         String newList = "";
         for (int i = 0; i < 32; i++)
         {

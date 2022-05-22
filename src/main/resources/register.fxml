@@ -38,7 +38,7 @@
 
     <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="8" />
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
-        <Button onAction="#handleRegisterAction" style="-fx-background-color: F68A06;" text="Register">
+        <Button fx:id="registerButton" onAction="#handleRegisterAction" style="-fx-background-color: F68A06;" text="Register">
          <effect>
             <DropShadow />
          </effect></Button>

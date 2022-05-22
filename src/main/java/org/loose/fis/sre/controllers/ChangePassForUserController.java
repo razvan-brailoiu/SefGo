@@ -9,9 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.loose.fis.sre.exceptions.DifferentPasswordsException;
-import org.loose.fis.sre.exceptions.UserNotInDatabaseException;
-import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
+import org.loose.fis.sre.exceptions.*;
 import org.loose.fis.sre.services.UserService;
 
 import java.io.IOException;
@@ -48,7 +46,8 @@ public class ChangePassForUserController {
         UserService.deleteByUsername(user);
         UserService.addUser(user, pass_one, (String) "Developer", "");
         statusLabel.setText("Password changed succesfully");
-        } catch (UsernameAlreadyExistsException | DifferentPasswordsException e) {
+        } catch (UsernameAlreadyExistsException | DifferentPasswordsException | OneOrMoreEmptyFieldsException |
+                 UsernameLengthException e) {
             statusLabel.setText("Passwords must be the same!");
         }
     }
