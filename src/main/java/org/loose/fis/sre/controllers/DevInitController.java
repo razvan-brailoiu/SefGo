@@ -21,6 +21,9 @@ public class DevInitController {
     private Button logOutButton;
 
     @FXML
+    Button whoElseButton;
+
+    @FXML
     private Button pickDatesButton;
 
     @FXML
@@ -39,6 +42,21 @@ public class DevInitController {
             Stage window = (Stage) pickDatesButton.getScene().getWindow();
             window.setTitle("Calendar");
             window.setScene(new Scene(root, 947, 450));
+
+
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @FXML
+    public void initWhoElse(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/WhoComnig.fxml"));
+            root = (Parent) loader.load();
+            Stage window = (Stage) whoElseButton.getScene().getWindow();
+            window.setTitle("Calendar");
+            window.setScene(new Scene(root, 694, 400));
 
 
         }catch(IOException e){
