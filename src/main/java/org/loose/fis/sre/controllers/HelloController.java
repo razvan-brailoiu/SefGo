@@ -120,17 +120,14 @@ public class HelloController {
         tDays.setText(String.valueOf(daysToWork));
         currentDate.setText(currentGlobalDate.getMonth() + "/" + currentGlobalDate.getYear());
         tDays.setText(String.valueOf(daysToWork));
-        System.out.println(username);
         String userList = UserService.getListByUsername(username);
 
         if(!Objects.equals(userList, "not selected")) {
-            System.out.println("\n\n" + userList + "\n\n");
             String[] stringArray = userList.split(",");
             for (String s : stringArray) {
                 list[Integer.parseInt(s)] = 1;
             }
         }
-
         markSelectedDays();
         dSelect.setText(String.valueOf(counter));
     }
@@ -145,6 +142,12 @@ public class HelloController {
         }
         UserService.deleteByUsername(username);
         UserService.addUser(username, password, "Developer", newList.toString());
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Save");
+        alert.setHeaderText("Your changes has been saved!");
+        alert.setContentText("Press ok to continue!");
+        if (alert.showAndWait().get() == ButtonType.OK);
+
     }
 
     @FXML
