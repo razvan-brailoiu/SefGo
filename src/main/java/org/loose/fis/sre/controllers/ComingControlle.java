@@ -749,10 +749,10 @@ public class ComingControlle {
             Stage window = (Stage) backButton.getScene().getWindow();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Exit");{
-                alert.setHeaderText("You are about to go back to ADMIN application!");
+                alert.setHeaderText("You are about to go back to Developer Menu!");
                 alert.setContentText("Leave for sure ? ");
                 if (alert.showAndWait().get() == ButtonType.OK) {
-                    window.setTitle("Admin");
+                    window.setTitle("Developer");
                     window.setScene(new Scene(root, 634, 428));
                 }
             }
